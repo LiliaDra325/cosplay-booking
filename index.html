@@ -11,10 +11,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    /* 暖色基底 */
+    --cream: #F3EAE3;
+    --warm-white: #FFF9F5;
 
+    /* 蓝色系 */
+    --night-blue: #252D46;
+    --dusty-blue: #7188A8;
+    --deep-blue: #394967;
+
+    /* 红色系 */
+    --wine-red: #963F52;
+    --rose-red: #C47D80;
+
+    /* 装饰色 */
+    --antique-gold: #C2A477;
+
+    /* 文字 */
+    --text-color: #403943;
+}
+    
 body {
-    background: #fffaf4;
-    color: #66584e;
+    background: var(--cream);
+    color: var(--text-color);
     font-family: "Microsoft YaHei", sans-serif;
 }
 
@@ -23,43 +43,54 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--antique-gold);
 }
-
 .logo {
     font-size: 22px;
     font-weight: bold;
-    color: #9b806b;
+    color: var(--wine-red);
 }
 
 nav a {
     text-decoration: none;
-    color: #806e61;
+    color: var(--deep-blue);
     margin-left: 20px;
 }
 
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: #f8eee5;
+    padding: 110px 20px;
+    background: var(--night-blue);
+    color: var(--warm-white);
+    position: relative;
 }
 
 .hero h1 {
     font-size: 38px;
     margin-bottom: 20px;
+    color: var(--warm-white);
 }
 
 .hero p {
     line-height: 2;
-    color: #998579;
+    color: #D5C5C5;
 }
+
 .button {
     display: inline-block;
     margin-top: 30px;
     padding: 13px 35px;
-    background: #c9a995;
-    color: white;
+    background: var(--wine-red);
+    color: var(--warm-white);
+    border: 1px solid var(--antique-gold);
     border-radius: 30px;
     text-decoration: none;
+    transition: 0.3s;
+}
+.button:hover {
+    background: var(--dusty-blue);
+    color: white;
 }
 
 .section {
@@ -71,20 +102,28 @@ nav a {
     margin-bottom: 25px;
 }
 
+
 .card {
     display: inline-block;
     padding: 30px;
     margin: 10px;
-    background: white;
+    background: var(--warm-white);
+    border: 1px solid var(--dusty-blue);
     border-radius: 18px;
     width: 220px;
-    box-shadow: 0 5px 20px #eadfd566;
+    box-shadow: 0 5px 20px #252D4620;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--wine-red);
 }
 
 footer {
     text-align: center;
     padding: 30px;
-    color: #aa998c;
+    background: var(--night-blue);
+    color: var(--antique-gold);
 }
 </style>
 </head>
@@ -102,8 +141,9 @@ footer {
 
 <section class="hero">
     <h1>欢迎来到我的妆造小屋 ♡</h1>
-    <p>记录每一次心动，让喜欢的角色来到现实。</p >
-    <p>这里是属于你的专属妆造预约空间。</p >
+    <p>闪耀于漆黑边界的视线</p >
+    <p>Let your fantasy shine in the darkness.</p >
+    <p>与我签订魔法的契约吧！</p>
     <a href="#booking" class="button">开始预约 →</a >
 </section>
 
@@ -133,7 +173,7 @@ footer {
 
 <section class="section" id="booking">
     <h2>Make an Appointment ♡</h2>
-    <p>期待与你一起完成下一场角色扮演。</p >
+    <p>期待与你一起完成下一次的冒险</p >
     <a href="mailto:example@email.com" class="button">
         联系我预约
     </a >
